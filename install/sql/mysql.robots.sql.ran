@@ -1,0 +1,17 @@
+
+-- Table structure for table `callbacks`
+--
+
+DROP TABLE IF EXISTS `robots`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `robots` (
+  `id` int(12) AUTO_INCREMENT,
+  `folder` varchar(250) NOT NULL DEFAULT '',
+  `created` int(12) NOT NULL DEFAULT '0',
+  `next` int(12) NOT NULL DEFAULT '0',
+  `action` int(12) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `SEARCH` (`id`,`created`,`next`,`action`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;

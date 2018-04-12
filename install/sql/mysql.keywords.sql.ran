@@ -1,0 +1,28 @@
+
+--
+-- Table structure for table `emails`
+--
+
+DROP TABLE IF EXISTS `keywords`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `keywords` (
+  `id` mediumint(20) AUTO_INCREMENT,
+  `robot-id` int(12) NOT NULL DEFAULT '0',
+  `plugin-id` int(12) NOT NULL DEFAULT '0',
+  `service-id` int(12) NOT NULL DEFAULT '0',
+  `keyword` varchar(128) NOT NULL DEFAULT '',
+  `sessions` int(8) NOT NULL DEFAULT '0',
+  `seconds` int(8) NOT NULL DEFAULT '0',
+  `every` int(8) NOT NULL DEFAULT '0',
+  `left` int(8) NOT NULL DEFAULT '0',
+  `next` int(12) NOT NULL DEFAULT '0',
+  `last` int(12) NOT NULL DEFAULT '0',
+  `reset` int(12) NOT NULL DEFAULT '0',
+  `total` int(12) NOT NULL DEFAULT '0',
+  `log-id` mediumint(32) NOT NULL DEFAULT '0',
+  `last-id` varchar(250) NOT NULL DEFAULT '',
+  `created` int(12) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `SEARCH` (`robot-id`,`plugin-id`,`service-id`,`keyword`,`next`,`reset`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
