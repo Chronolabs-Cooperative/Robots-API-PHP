@@ -3,6 +3,19 @@
 ## Author: Dr. Simon Antony Roberts <simon@snails.email>
 ### Robots for Twitter + Other Later Social Media Platforms API's
 This is a ROBOT(s) API Service there is no calling or REST API functions on this API from here it is an automated service. This help only provide current tasks that have been described by the robot's status lines on logging! Howevere there is in the /include path the following configuration files...
+# Configuring for Crontab
+You can put more cron.execute.php if you want to have more sessioning on the apis but you can get banned for this, run on the shell of the service the following:
+    $ sudo crontab -e
+
+Now put the following in:-
+    */1 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.execute.php
+    */1 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.execute.php
+    */1 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.execute.php
+    */1 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.execute.php
+    */1 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.execute.php
+    */1 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.execute.php
+    */15 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.mining.php
+    */15 * * * * /usr/bin/php -q /var/www/robots.snails.email/crons/cron.reset.php
 
 # Configuring for Twitter
 In the /include/robots path you create a username for the name of the folder ie. @OpenRend, then in there is a number of *.diz and one /include/robots/@OpenRend/settings.php which has the following data in it...
